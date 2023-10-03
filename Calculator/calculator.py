@@ -15,7 +15,7 @@ elif op == "-":
     print('The answer to your problem is:', solution)
 elif op == "/":
     solution = num1 / num2
-    print('The answer to your problem is:', solution)
+    print('The answer to your problem is:', solution) 
 elif op == "*":
     solution = num1 * num2
     print('The answer to your problem is:', solution)
@@ -29,11 +29,11 @@ elif op == ">":
     if num1 > num2:
         print('The answer to your problem is: True')
     else:
-        print("The answer to your problem is false")
+        print("The answer to your problem is: False")
 elif op == "<":
     if num1 < num2:
         print('The answer to your problem is: True')
     else:
-        print("The answer to your problem is false")
+        print("The answer to your problem is: False")
 else:
     print('Unsupported operation!')
