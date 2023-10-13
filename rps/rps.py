@@ -24,4 +24,4 @@ elif ans == "paper" and ai == "scissors":
 elif ans == "scissors" and ai == "rock":
     print("Rock beats scissors you lost!")
 elif ans == ai:
-    print(f"We both choose {ans}! Try again!")
+    print(f"We both choose {ans}! Let's try again!")
