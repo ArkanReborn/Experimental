@@ -1,4 +1,4 @@
-num = int(input())
+num = int(input("Please enter a number:\n"))
 
 numstr = str(num)
 numlen = len(numstr)
