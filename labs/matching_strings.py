@@ -15,7 +15,6 @@ if ulen1 > ulen2:
     else: 
         print(f'{checker} character matches')
             
-            
 elif ulen1 < ulen2:
     for letter in range(ulen1):
         if uin1[letter] == uin2[letter]:
