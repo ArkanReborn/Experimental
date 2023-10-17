@@ -1,7 +1,5 @@
-import math
-
 weight = int(input("Please input your weight: \n"))
-wtmod = (weight) * 2/3
+wtmod = weight * 2 / 3
 activity = int(input("Please indicate how many minutes you exercised today: \n"))
 
 actwater = 0
