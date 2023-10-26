@@ -20,7 +20,7 @@ else:
   print()
 
   v = math.pow(ws, 0.16)
-  chill_form = 35.74 + 0.6215 * temp - 35.75 * v + 0.4375 * temp * v
+  chill_form = 35.74 + 0.6215 * temp - 35.75 * v + 0.4275 * temp * v
   
   print(f'Based on the entered temperature {temp:.2f} and wind speed of {ws:.2f} the currently calculated wind-chill is calculated to be: {chill_form:.2f}')
   
