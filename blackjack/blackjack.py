@@ -1,4 +1,3 @@
-import math
 import random
 
 def game(cards, hand, card_type=0, card_num=0):
