@@ -1,11 +1,30 @@
 import math
 import random
 
+def game(cards, hand, card_type=0, card_num=0):
+
+    card_face = ""
+    
+    for card in cards:
+        hand = hand.replace(card, cards[card])
+
+    if card_type == 0 or card_type > 4:
+        raise ValueError(f'Error Invalid Card Type!')
+    elif card_type == 1:
+        card_face = "Hearts"
+    elif card_type == 2:
+        card_face = "Spades"
+    elif card_type == 3:
+        card_face = "Diamonds"
+    elif card_type == 4:
+        card_face = "Clubs"
+
+    print(f'{hand} of {card_face}')
+    return 
 
 cards = {
-    "1": "ace",
-    "2": "2",
-    "3": "3",
+    "2" : "2",
+    "3" : "3",
     "4" : "4",
     "5" : "5",
     "6" : "6",
@@ -16,33 +35,16 @@ cards = {
     "11" : "King",
     "12" : "Queen",
     "13" : "Jack",
+    "14" : "Ace",
 }
 
-hand_start = 2
-curr_cards = 1
+card_type1 = random.randint(1, 4)
+start_cards1 = random.randint(2, 14)
+hand1 = str(start_cards1)
 
+card_type2 = random.randint(1, 4)
+start_cards2 = random.randint(2, 14)
+hand2 = str(start_cards2)
 
-for card in cards:
-    while card in hand:
-        
-        card_type = random.randint(1, 4)
-        start_cards = random.randint(1, 13)
-
-        hand = str(start_cards)
-
-        if curr_cards <= hand_start:
-
-            hand = hand.replace(card, cards[card])
-
-            print(f'Your card is a {hand} of hearts')
-
-    #        if card_type == "1":
-    #            print(f'Your card is a {hand} of hearts')        
-    #        elif card_type == "2":
-    #            print(f'Your card is a {hand} of spades')
-    #        elif card_type == "3":
-    #            print(f'Your card is a {hand} of diamonds')
-    #        elif card_type == "4":
-    #            print(f'Your card is a {hand} of clubs')
-
-            curr_cards += 1
+game1 = game(cards, hand1, card_type1, 1)
+game2 = game(cards, hand2, card_type2, 2)
