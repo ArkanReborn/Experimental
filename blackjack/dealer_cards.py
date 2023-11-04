@@ -18,7 +18,7 @@ def game(cards, hand, card_type=0, card_num=0):
     elif card_type == 4:
         card_face = "Clubs"
 
-    print(f'{hand} of {card_face}')
+    print(f'Dealer Card: {hand} of {card_face}')
     return 
 
 cards = {
