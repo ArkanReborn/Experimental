@@ -2,6 +2,8 @@ import random
 
 def player_game(cards, hand, card_type=0, card_num=0):
     card_face = ""
+    player_list = []
+
     for card in cards:
         hand = hand.replace(card, cards[card])
 
@@ -17,10 +19,12 @@ def player_game(cards, hand, card_type=0, card_num=0):
         card_face = "Clubs"
 
     print(f'Player Card {card_num}: {hand} of {card_face}')
-    return 
+    player_list.append(hand)
+    return player_list
 
 def dealer_game(cards, hand, card_type=0, card_num=0):
     card_face = ""
+    dealer_list = []
     for card in cards:
         hand = hand.replace(card, cards[card])
 
@@ -36,7 +40,8 @@ def dealer_game(cards, hand, card_type=0, card_num=0):
         card_face = "Clubs"
 
     print(f'Dealer Card {card_num}: {hand} of {card_face}')
-    return 
+    dealer_list.append(hand)
+    return dealer_list
 
 cards = {
     "2" : "2",
@@ -82,33 +87,73 @@ dealer_game2 = dealer_game(cards, dealer_hand2, dealer_card_type2, 2)
 
 
 # Compare Player and Dealer Cards
-value = 0
 
 # Resolving Player Ace Value(s)
-if (player_start_cards1 or player_start_cards2) == 14:
-    ace_val = input("Would you like your player ace to be worth 1 or 11 points?  Please enter 1 or 11 ONLY")
-    if ace_val == 1:
-        value = 1
-    elif ace_val == 11:
-        value = 11
-if player_start_cards1 and player_start_cards2 == 14:
-    ace_value = input("Would you like your second player ace to be worth 1 or 11 points? Please enter 1 or 11 ONLY")
-    if ace_value == 1:
-        value += 1
-    elif ace_value == 11:
-        value += 11
+
+player_value = 0
+player_counter = 0
+
+player_list = player_game()
+
+def player_ace_values(player_start_cards1, player_start_cards2, player_value=0, player_counter=0):
+    if (player_start_cards1 or player_start_cards2) == 14:
+        ace_val = input("Would you like your player ace to be worth 1 or 11 points?  Please enter 1 or 11 ONLY")
+        if ace_val == 1:
+            player_value = 1
+            player_counter += 1
+            if player_start_cards1 == 14:
+                player_list.pop(0)
+        elif ace_val == 11:
+            player_value = 11
+            player_counter += 1
+    if player_start_cards1 and player_start_cards2 == 14:
+        ace_value = input("Would you like your second player ace to be worth 1 or 11 points? Please enter 1 or 11 ONLY")
+        if ace_value == 1:
+            player_value += 1
+            player_counter += 1
+        elif ace_value == 11:
+            player_value += 11
+            player_counter += 1
+        return player_value, player_counter
 
 # Resolving Dealer Ace Value(s)
-if (dealer_start_cards1 or dealer_start_cards2) == 14:
-    ace_val = input("Would you like your dealer ace to be worth 1 or 11 points?  Please enter 1 or 11 ONLY")
-    if ace_val == 1:
-        value = 1
-    elif ace_val == 11:
-        value = 11
-if dealer_start_cards1 and dealer_start_cards2 == 14:
-    ace_value = input("Would you like your second dealer ace to be worth 1 or 11 points? Please enter 1 or 11 ONLY")
-    if ace_value == 1:
-        value += 1
-    elif ace_value == 11:
-        value += 11
+dealer_value = 0
+dealer_counter = 0
 
+def dealer_ace_values(dealer_start_cards1, dealer_start_cards2, dealer_value=0, dealer_counter=0):
+    if (dealer_start_cards1 or dealer_start_cards2) == 14:
+        ace_val = input("Would you like your dealer ace to be worth 1 or 11 points?  Please enter 1 or 11 ONLY")
+        if ace_val == 1:
+            dealer_value = 1
+            dealer_counter += 1
+        elif ace_val == 11:
+            dealer_value = 11
+            dealer_counter += 1
+    if dealer_start_cards1 and dealer_start_cards2 == 14:
+        ace_value = input("Would you like your second dealer ace to be worth 1 or 11 points? Please enter 1 or 11 ONLY")
+        if ace_value == 1:
+            dealer_value += 1
+            dealer_counter += 1
+        elif ace_value == 11:
+            dealer_value += 11
+            dealer_counter += 1
+    return dealer_value, dealer_counter
+
+player_total = 0
+dealer_total = 0
+
+def cal_diff(player_value, player_counter, dealer_value, dealer_counter, player_start_cards1, player_start_cards2, dealer_start_cards1, dealer_start_cards2):
+
+    if player_counter == 0:
+        player_total = player_start_cards1 + player_start_cards2
+    elif player_counter == 1:
+        player_total = player_value + 
+
+
+    dealer_total = dealer_start_cards1 + dealer_start_cards2
+    player_diff = 21 - player_total
+    dealer_diff = 21 - dealer_total
+
+    return player_diff, dealer_diff
+
+print()
