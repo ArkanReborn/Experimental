@@ -147,7 +147,7 @@ def cal_diff(player_value, player_counter, dealer_value, dealer_counter, player_
     if player_counter == 0:
         player_total = player_start_cards1 + player_start_cards2
     elif player_counter == 1:
-        player_total = player_value + 
+        player_total += player_value
 
 
     dealer_total = dealer_start_cards1 + dealer_start_cards2
