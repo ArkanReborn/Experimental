@@ -23,15 +23,15 @@ if __name__ == "__main__":
     triangle2 = Triangle()
 
     # TODO: Read and set base and height for triangle1 (use set_base() and set_height())
-    t1input_1 = float(input())
-    t1input_2 = float(input())
+    t1input_1 = float(input("Enter the base for triangle 1: "))
+    t1input_2 = float(input("Enter the height for triange 1: "))
     
     triangle1.set_base(t1input_1)
     triangle1.set_height(t1input_2)
       
     # TODO: Read and set base and height for triangle2 (use set_base() and set_height())
-    t2input_1 = float(input())
-    t2input_2 = float(input())
+    t2input_1 = float(input("Enter the base for triangle 2: "))
+    t2input_2 = float(input("Enter the height for triangle 2: "))
     
     triangle2.set_base(t2input_1)
     triangle2.set_height(t2input_2)
