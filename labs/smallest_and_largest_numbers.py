@@ -8,4 +8,4 @@ while x > 0:
     if mx < x:
         mx = x
     x = int(input())
-print(f'{mn} and {mx}')
+print(f"{mn} and {mx}")

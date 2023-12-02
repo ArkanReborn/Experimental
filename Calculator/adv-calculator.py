@@ -17,15 +17,15 @@ while counts != nums:
         num_list.append(num)
     elif counts == 3:
         num = input(f"What would you like to enter for your 3rd number? : \n")
-        num_list.append(num)   
+        num_list.append(num)
     elif counts >= 4:
         num = input(f"What would you like to enter for your {counts}th number? : \n")
-        num_list.append(num)          
+        num_list.append(num)
 
 if op == "+":
     while counts > 0:
-        sol = (num_list[(counts - 1)] + (num_list[(counts - 2)]))
+        sol = num_list[(counts - 1)] + (num_list[(counts - 2)])
         counts -= 1
-    print(f'The answer to your equation is {sol}', end='')
+    print(f"The answer to your equation is {sol}", end="")
 elif op != "+" or "-" or "/" or "*":
     print("Unsported operand!")
