@@ -23,7 +23,7 @@ def calc_toll(hour, is_morning, is_weekend):
     return round(cost, 2)
     
 if __name__ == '__main__':
-    print(calc_toll(8, True, False))
-    print(calc_toll(1, False, False))
-    print(calc_toll(3, False, True))
-    print(calc_toll(5, True, True))
+    print(f"{calc_toll(8, True, False)}")
+    print(f"{calc_toll(1, False, False)}")
+    print(f"{calc_toll(3, False, True)}")
+    print(f"{calc_toll(5, True, True)}")
