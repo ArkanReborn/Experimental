@@ -1,14 +1,14 @@
 import random
 
-def game(cards, hand, card_type=0, card_num=0):
 
+def game(cards, hand, card_type=0, card_num=0):
     card_face = ""
-    
+
     for card in cards:
         hand = hand.replace(card, cards[card])
 
     if card_type == 0 or card_type > 4:
-        raise ValueError(f'Error Invalid Card Type!')
+        raise ValueError(f"Error Invalid Card Type!")
     elif card_type == 1:
         card_face = "Hearts"
     elif card_type == 2:
@@ -18,23 +18,24 @@ def game(cards, hand, card_type=0, card_num=0):
     elif card_type == 4:
         card_face = "Clubs"
 
-    print(f'Dealer Card: {hand} of {card_face}')
-    return 
+    print(f"Dealer Card: {hand} of {card_face}")
+    return
+
 
 cards = {
-    "2" : "2",
-    "3" : "3",
-    "4" : "4",
-    "5" : "5",
-    "6" : "6",
-    "7" : "7",
-    "8" : "8",
-    "9" : "9",
-    "10" : "10",
-    "11" : "King",
-    "12" : "Queen",
-    "13" : "Jack",
-    "14" : "Ace",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9",
+    "10": "10",
+    "11": "King",
+    "12": "Queen",
+    "13": "Jack",
+    "14": "Ace",
 }
 
 card_type1 = random.randint(1, 4)

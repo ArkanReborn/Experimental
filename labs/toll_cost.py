@@ -1,7 +1,6 @@
 def calc_toll(hour, is_morning, is_weekend):
-    
     cost = 0.0
-    
+
     if (hour < 7) and (is_morning == True):
         cost = 1.15
         if is_weekend == True:
@@ -16,7 +15,7 @@ def calc_toll(hour, is_morning, is_weekend):
             cost += 0.25
     elif (hour >= 3 and hour < 8) and (is_morning == False):
         cost = 3.95
-    elif (hour >= 8 and is_morning == False):
+    elif hour >= 8 and is_morning == False:
         cost = 1.40
         if is_weekend == True:
             cost -= 0.30

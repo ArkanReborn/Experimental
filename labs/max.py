@@ -1,11 +1,12 @@
 def find_max(num_1, num_2):
-   max_val = 0.0
+    max_val = 0.0
 
-   if (num_1 > num_2):  # if num1 is greater than num2,
-      max_val = num_1   # then num1 is the maxVal.
-   else:                # Otherwise,
-      max_val = num_2   # num2 is the maxVal
-   return max_val
+    if num_1 > num_2:  # if num1 is greater than num2,
+        max_val = num_1  # then num1 is the maxVal.
+    else:  # Otherwise,
+        max_val = num_2  # num2 is the maxVal
+    return max_val
+
 
 max_sum = 0.0
 
@@ -21,12 +22,12 @@ if num_a > num_b:
     mx1 = num_a
 else:
     mx1 = num_b
-    
+
 if num_y > num_z:
     mx2 = num_y
 else:
     mx2 = num_z
-    
+
 max_sum = mx1 + mx2
 
-print(f'max_sum is: {max_sum}')
+print(f"max_sum is: {max_sum}")

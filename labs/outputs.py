@@ -13,4 +13,4 @@ lst.pop(-1)
 
 for number in lst:
     if number <= last:
-        print(number, end=',')
+        print(number, end=",")

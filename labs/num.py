@@ -6,10 +6,10 @@ x = int(input())
 counter = 0
 
 if low + x >= high:
-    print('0')
+    print("0")
     exit(0)
 
 while low < high:
     counter += 1
-    low += x    
+    low += x
 print(counter)
