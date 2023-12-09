@@ -85,8 +85,6 @@ def print_month(year, month, weekday):
     if weekday == 0:
       print()
 
-
-  
   if start_of_next_month != 0:
     print("")
   print("\n")
@@ -102,4 +100,3 @@ if __name__ == "__main__":
   for month in range(12):
     first_day_of_next = print_month(year, month, first_day)
     first_day = first_day_of_next
-    
