@@ -14,5 +14,5 @@ class Solution(object):
     # Memory 11.50 MB beats 90.10% of Python users
 
 nums = Solution()
-print(nums.plusOne((1,4,2))) # Outputs [1, 4, 3]
+print(nums.plusOne([1,4,2])) # Outputs [1, 4, 3]
 print(nums.plusOne((9,9,9,9))) # Outputs [1, 0, 0, 0, 0]
