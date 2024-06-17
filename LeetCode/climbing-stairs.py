@@ -12,7 +12,7 @@ class Solution(object):
 
         for i in range(2, n + 1):
             dp[i] = dp[i - 1] + dp[i - 2]
-            # print(f"{dp[i]} stairs climbed")
+        #print(f"{dp[i]} stairs climbed")
 
         return dp[n]
     # 7 ms beats 95.2% of python submissions
@@ -20,5 +20,5 @@ class Solution(object):
 
 
 stairs = Solution()
-print(stairs.climbStairs(2))  # 2 Stairs climbed
-print(stairs.climbStairs(6))  # 3 Stairs climbed
+print(f"{stairs.climbStairs(2)} stairs climbed")  # 2 Stairs climbed
+print(f"{stairs.climbStairs(6)} stairs climbed")  # 3 Stairs climbed
